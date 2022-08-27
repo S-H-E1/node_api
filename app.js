@@ -35,7 +35,7 @@ app.post('/', (req, res) => {
     res.redirect("http://moodle.smuc.edu.et/students/")
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`running on ${port}`)
 })
 module.exports = app;
